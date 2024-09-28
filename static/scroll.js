@@ -1,4 +1,4 @@
-export default class Scroll{
+export class Scroll{
     // Ramiro Ríos 2024.
     constructor(_config) {
         this.callback = null;

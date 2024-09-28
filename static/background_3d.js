@@ -1,13 +1,14 @@
 // Ramiro Ríos 2022
+//UPDATED 2024-09-28
 import * as THREE from 'three';
-
 import { STLLoader } from './jsm/STLLoader.js';
 
-// import ovni_3d from './ovni_hd.stl';
-import ovni_3d from './ovni_lofi.stl';
-import planeta_1_stl from './planeta-1.stl';
 
-export default class Background3D {
+
+// import ovni_3d from './ovni_hd.stl';
+
+
+export class Background3D {
     constructor(){
         console.log("-CONSTRUCTOR-");
         this.scene = new THREE.Scene();
@@ -29,6 +30,7 @@ export default class Background3D {
 
         // this.renderer = new THREE.CanvasRenderer();
         this.renderer = new THREE.WebGLRenderer({alpha: true});
+        // this.renderer = new THREE.WebGLRenderer({alpha: true, canvas: raCanvas});
         this.renderer.setSize(window.innerWidth, window.innerHeight);
 
         this.renderer.domElement.style.width = "97vw";
@@ -39,7 +41,7 @@ export default class Background3D {
 
         console.log("-etapa 1-");
         const loader = new STLLoader();
-        loader.load(ovni_3d, 
+        loader.load("./ovni_lofi.stl", 
             (geometry)=>{
                 this.ovni = this.addSTLModel(geometry);
                 this.ovni.scale.set(0.1, 0.1, 0.1);
@@ -48,7 +50,7 @@ export default class Background3D {
             (error) => { console.log(error) }
         );
         console.log("-etapa 2-");
-        loader.load(planeta_1_stl, 
+        loader.load("./planeta-1.stl", 
             (geometry)=>{ 
                 this.planeta_1 = this.addSTLModel(geometry);
                 this.planeta_1.position.y = -100;

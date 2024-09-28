@@ -1,8 +1,9 @@
 // Ramiro Ivan Rios 2022.
 // UPDATE 2024-09-28: lo preparo para subir a platon-actual.github.io
+import {Background3D} from './background_3d.js';
+import {Scroll} from './scroll.js';
 
-import {Background3D} from './background_3d';
-import {Scroll} from './scroll';
+
 // import './style.css'
 
 createChefSuggestion( 50,   "LEFT", "Programación Web");
