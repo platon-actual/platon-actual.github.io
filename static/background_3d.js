@@ -1,7 +1,7 @@
 // Ramiro Ríos 2022
 import * as THREE from 'three';
 
-import { STLLoader } from '../node_modules/three/examples/jsm/loaders/STLLoader.js';
+import { STLLoader } from './jsm/STLLoader.js';
 
 // import ovni_3d from './ovni_hd.stl';
 import ovni_3d from './ovni_lofi.stl';
