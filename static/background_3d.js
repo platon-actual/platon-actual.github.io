@@ -30,18 +30,21 @@ export class Background3D {
 
         // this.renderer = new THREE.CanvasRenderer();
         this.renderer = new THREE.WebGLRenderer({alpha: true});
+        //this.renderer = new THREE.WebGLRenderer();
         // this.renderer = new THREE.WebGLRenderer({alpha: true, canvas: raCanvas});
         this.renderer.setSize(window.innerWidth, window.innerHeight);
 
-        this.renderer.domElement.style.width = "97vw";
-        this.renderer.domElement.style.height = "97vh";
-        this.renderer.domElement.style.position = "fixed";
-        this.renderer.domElement.style.zIndex = "-1";
+        this.renderer.domElement.style.width = "70vw";
+        this.renderer.domElement.style.height = "auto";
+        this.renderer.domElement.style.background = "darkorange";
+        this.renderer.domElement.style.margin = "1vw 15vw 1vw 15vw";
+        // this.renderer.domElement.style.position = "fixed";
+        // this.renderer.domElement.style.zIndex = "-1";
         document.body.appendChild( this.renderer.domElement);
 
         console.log("-etapa 1-");
         const loader = new STLLoader();
-        loader.load("./ovni_lofi.stl", 
+        loader.load("static/ovni_lofi.stl", 
             (geometry)=>{
                 this.ovni = this.addSTLModel(geometry);
                 this.ovni.scale.set(0.1, 0.1, 0.1);
@@ -50,7 +53,7 @@ export class Background3D {
             (error) => { console.log(error) }
         );
         console.log("-etapa 2-");
-        loader.load("./planeta-1.stl", 
+        loader.load("static/planeta-1.stl", 
             (geometry)=>{ 
                 this.planeta_1 = this.addSTLModel(geometry);
                 this.planeta_1.position.y = -100;

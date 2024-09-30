@@ -6,12 +6,12 @@ import {Scroll} from './scroll.js';
 
 // import './style.css'
 
-createChefSuggestion( 50,   "LEFT", "Programación Web");
-createChefSuggestion( 600,  "RIGHT", " Diseño 3D");
-createChefSuggestion( 1200,  "LEFT", " Impresión 3D");
-createChefSuggestion( 1800, "RIGHT","Desarrollo de videojuegos");
-createChefSuggestion( 2400, "LEFT", "Desarrollo de apps mobile");
-createChefSuggestion( 3000, "RIGHT", " Servicios digitales");
+// createChefSuggestion( 50,   "LEFT", "Programación Web");
+// createChefSuggestion( 600,  "RIGHT", "Diseño 3D");
+// createChefSuggestion( 1200,  "LEFT", " Impresión 3D");
+// createChefSuggestion( 1800, "RIGHT","Desarrollo de videojuegos");
+// createChefSuggestion( 2400, "LEFT", "Desarrollo de apps mobile");
+// createChefSuggestion( 3000, "RIGHT", " Servicios digitales");
 
 let window_scroll = new Scroll({onScroll: updateHeight});
 let fondo = new Background3D();
