@@ -35,9 +35,9 @@ export class Background3D {
         this.renderer.setSize(window.innerWidth, window.innerHeight);
 
         this.renderer.domElement.style.width = "70vw";
-        this.renderer.domElement.style.height = "auto";
+        //this.renderer.domElement.style.height = "auto";
         this.renderer.domElement.style.background = "darkorange";
-        this.renderer.domElement.style.margin = "1vw 15vw 1vw 15vw";
+        //this.renderer.domElement.style.margin = "1vw 15vw 1vw 15vw";
         // this.renderer.domElement.style.position = "fixed";
         // this.renderer.domElement.style.zIndex = "-1";
         document.body.appendChild( this.renderer.domElement);
